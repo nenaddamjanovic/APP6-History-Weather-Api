@@ -1,3 +1,3 @@
 # What is this project?
-This app  
+This app teaches basic flask, bigdata for creating simple API
 ### History weather api
