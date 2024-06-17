@@ -6,10 +6,15 @@ import pandas as pd
 
 app = Flask(__name__)
 
+# biramo šta ćemo da ispišemo iz .txt fajla
+stations = pd.read_csv("data_small/stations.txt", skiprows=17)
+stations = stations[["STAID", "STANAME                                 "]]
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    # biramo šta ćemo da ispišemo iz .txt fajla
+    return render_template("home.html",
+                           data=stations.to_html())
 
 
 @app.route("/api/v1/<station>/<date>")
