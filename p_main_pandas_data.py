@@ -9,7 +9,7 @@ df = pd.read_csv('files/p_dictionary.csv')
 
 @app.route('/')
 def index():
-    return render_template('P_home_pandas_data.html',
+    return render_template('p_home_pandas_data.html',
                            tables=[df.to_html(classes='data')],
                            titles=df.columns.values)
 

@@ -8,7 +8,7 @@ df = pd.read_csv("files/dictionary.csv")
 
 @app.route("/")
 def home():
-    return render_template("P_home_API.html")
+    return render_template("p_home_API.html")
 
 @app.route("/api/v1/<word>")
 def api(word):
